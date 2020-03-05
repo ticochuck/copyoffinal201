@@ -5,9 +5,9 @@ html{
   background-size: cover;
 }
 
-
-/*HEADER SECTION*/
+/*Header Section and Nav bar consistent across all pages*/
 header{
+  display: inline-flex;
   width: 100%;
   height: 50px;
   margin-bottom: 30px;
@@ -16,144 +16,57 @@ header{
 }
 
 h1{
+  margin-top: 0;
+  display: inline-flex;
   font-size: 30px;
-  text-align: left;
-  margin: auto 30px;
+  text-align: center;
+  margin: auto auto;
   padding-top: 5px;
 }
-#menuBtn {
-  background-color: rgba(9, 87, 87,.40);
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-}
-
-#menuDropdown {
-  position: relative;
-  display: inline-block;
-}
-
-#menuList {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-#menuList a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-#menuList a:hover {background-color: #ddd;}
-
-#menuDropdown:hover #menuList {display: block;}
-
-#menuDropdown:hover #menuBtn {background-color:rgb(9, 87, 87);}/* Dropdown Button */
-
-#menuBtn {
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-}
-
-#menuDropdown {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: inline-block;
-}
-
-#menuList {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-#menuList a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-#menuList a:hover {background-color: #ddd;}
-
-#menuDropdown:hover #menuList {display: block;}
-
-#menuDropdown:hover #menuBtn {background-color: rgb(9, 87, 87);}
-
 
 #headerWelcome{
   font-family: 'Shadows Into Light';
   text-align: center;
   z-index: 2;
-  margin-left: 120px;
   color: white;
   padding: 10px;
   font-size: 30px;
-}   
-/* .dropbtn {
-  background-color: purple;
+} 
+
+.dropbtn {
+  background-color: rgba(9, 87, 87,.40);;
   color: white;
-  padding: 10px;
+  padding: 16px;
   font-size: 16px;
   border: none;
+  cursor: pointer;
 }
+
 .dropdown {
   position: relative;
   display: inline-block;
 }
+
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #F1F1F1;
+  right: 0;
+  background-color: #f1f1f1;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
+
 .dropdown-content a {
   color: black;
-  padding: 16px 16px;
+  padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-.dropdown:hover .dropbtn {
-  background-color: purple;
-} */
 
-/* nav{
-  position: absolute;
-  width: 94.5%;
-  height: 20px;
-  top: 40px;
-}
-
-#navBarList{
-  display: inline-flex;
-  margin-left: 30px;
-}
-
-#navBarList li{
-  padding-right: 20px;
-  text-align: left;
-  width: fit-content;
-} */
+.dropdown-content a:hover {background-color: #ddd;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color:rgb(9, 87, 87);}
 
 #logo{
   position: absolute;
@@ -162,6 +75,7 @@ h1{
   margin: auto 0px;
   border: 1PX black solid;
 }
+/* End of header section and nav bar */
 
 
 /* MAIN SECTION
