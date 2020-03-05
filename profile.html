@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weekly Planner</title>
+        <link rel="stylesheet" href="css/reset.css" type="text/css">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="css/styleDetail.css" type="text/css">
+    </head>
+    <body>
+        <header>
+            <h1 id="headerWelcome">USERNAME'S upcoming Week</h1>
+            <div id="menuDropdown">
+                <button id="menuBtn">Menu</button>
+                <div id="menuList">
+                    <a href="main.html">Planner</a>
+                    <a href="aboutUs.html">About Us</a>
+                    <a href="detailPage.html">Category Items</a>
+                    <a href="index.html">Sign Out</a>
+                <div>
+            </div>
+        </header>
+        <main>
+            <section id="detailSection">
+                <section id="detailedList">
+                    <div id="listHeader">
+                        <h3>Profile Information</h3>
+                    </div>
+                    <ul>
+                        <!-- DOMit Team Assemble! -->
+                       
+                        <form id="updateName">
+                          <label id="label1">Hello!</br></label>
+                          <label id="label2">Enter new username: </label>
+                          <input id="userName" type="text" required placeholder="new UserName">
+                          <button value="update" onclick="updateUserFunction()">Update</button> 
+                        </form>
+                        
+                        
+                        <p>Show user info like times logged in?</p>
+                        <p>users can delete events from this page?</p>
+                        
+                        <p>Delete Account</p>
+                        <p>your account will be permanently deleted</p>
+                        <button onclick="deleteUserFunction()">Delete Account</button>
+                    </ul>
+                </section>
+                <section id="detailedInformationSection">
+                    <img id="detailPic" src="https://via.placeholder.com/150x150/" alt="placeholder">
+                    <h2>Detailed Item</h2>
+                    <p>Maybe we can show the Chart in this page with specific info about the user?</p>
+                    <!-- Section info based on Object properties -->
+                </section>
+            </section>
+        </main>
+        <footer>
+
+        </footer>
+        <script src="js/app.js"></script>
+        <script src="js/rendering.js"></script>
+    </body>
+</html>
