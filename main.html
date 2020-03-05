@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weekly Planner</title>
+        <link rel="stylesheet" href="css/reset.css" type="text/css">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1 id="headerWelcome">USERNAME'S upcoming Week!</h1>
+            <div id="menuDropdown">
+                <button id="menuBtn">Menu</button>
+                <div id="menuList">
+                    <a href="detailPage.html">Category Items</a>
+                    <a href="aboutUs.html">About Us</a>
+                    <a href="profile.html">My Account</a>
+                    <a href="index.html">Sign Out</a>
+                <div>
+            </div>
+            <!-- <img id="logo" src="https://via.placeholder.com/50x50/" alt="placeholder"> -->
+        </header>
+        <main>
+                <form id="addNewTask_Form">
+                    <h3>Add Task</h3>
+                    <!-- <div id="addNewSection"> -->
+                        <label>Choose a Category:</label>
+                        <select id="taskCategory" required>
+                            <option value=""></option>
+                            <option value="Exercise">Exercise</option>
+                            <option value="Meals">Meal</option>
+                            <option value="ToDo">To Do List</option>
+                            <option value="Activity">Activity</option>
+                        </select>
+                        <div id="timeOfDay_Dropdown">
+                            <label>Time of Day:</label>
+                            <select id="daytimeSelected">
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    <!-- </div> -->
+                    <label>Enter task...<input id="taskEntered" type="text" required></label>    
+                    <fieldset id="daysTaskApplied">
+                        <input type="checkbox" id="day1_chkbx" value="day1"> <label for="day1">MON</label>
+                        <input type="checkbox" id="day2_chkbx" value="day2"> <label for="day2">TUE</label>
+                        <input type="checkbox" id="day3_chkbx" value="day3"> <label for="day3">WED</label>
+                        <input type="checkbox" id="day4_chkbx" value="day4"> <label for="day4">THUR</label>
+                        <input type="checkbox" id="day5_chkbx" value="day5"> <label for="day5">FRI</label>
+                        <input type="checkbox" id="day6_chkbx" value="day6"> <label for="day6">SAT</label>
+                        <input type="checkbox" id="day7_chkbx" value="day7"> <label for="day7">SUN</label>
+                    </fieldset>
+                    <a href="detailPage.html"><button id="detailButton">Add More Info</button></a>
+                    <button id="applyTask">Apply Event</button>
+                </form>
+
+
+            <section id="weeklyDisplaySection">
+                <!-- <h2>Weekly Display</h2> -->
+                <div class="displayDay" id="day1"> <!-- could change id to Sunday, but keeping id with integer helps for the Stretch goal -->
+                    <h3 class="displayHeaderDay" id="day1_Name">MONDAY</h3>
+                    <ul class="displayListDay" id="day1_morning"></ul>
+                    <ul class="displayListDay" id="day1_afternoon"></ul>
+                    <ul class="displayListDay" id="day1_evening"></ul>
+                </div>
+                <div class="displayDay" id="day2"> 
+                    <h3 class="displayHeaderDay" id="day2_Name">TUESDAY</h3>
+                    <!-- Stretch Goal Date: <p id="day2_Date"></p> -->
+                    <ul class="displayListDay" id="day2_morning"></ul>
+                    <ul class="displayListDay" id="day2_afternoon"></ul>
+                    <ul class="displayListDay" id="day2_evening"></ul>
+                </div>
+                <div class="displayDay" id="day3"> 
+                    <h3 class="displayHeaderDay" id="day3_Name">WEDNESDAY</h3>
+                    <!-- Stretch Goal Date: <p id="day3_Date"></p> -->
+                    <ul class="displayListDay" id="day3_morning"></ul>
+                    <ul class="displayListDay" id="day3_afternoon"></ul>
+                    <ul class="displayListDay" id="day3_evening"></ul>
+                </div>
+                <div class="displayDay" id="day4"> 
+                    <h3 class="displayHeaderDay" id="day4_Name">THURSDAY</h3>
+                    <!-- Stretch Goal Date: <p id="day4_Date"></p> -->
+                    <ul class="displayListDay" id="day4_morning"></ul>
+                    <ul class="displayListDay" id="day4_afternoon"></ul>
+                    <ul class="displayListDay" id="day4_evening"></ul>
+                </div>
+                <div class="displayDay" id="day5"> 
+                    <h3 class="displayHeaderDay" id="day5_Name">FRIDAY</h3>
+                    <!-- Stretch Goal Date: <p id="day5_Date"></p> -->
+                    <ul class="displayListDay" id="day5_morning"></ul>
+                    <ul class="displayListDay" id="day5_afternoon"></ul>
+                    <ul class="displayListDay" id="day5_evening"></ul>
+                    
+                </div>
+                <div class="displayDay" id="day6"> 
+                    <h3 class="displayHeaderDay" id="day6_Name">SATURDAY</h3>
+                    <!-- Stretch Goal Date: <p id="day6_Date"></p> -->
+                    <ul class="displayListDay" id="day6_morning"></ul>
+                    <ul class="displayListDay" id="day6_afternoon"></ul>
+                    <ul class="displayListDay" id="day6_evening"></ul>
+                </div>
+                <div class="displayDay" id="day7"> 
+                    <h3 class="displayHeaderDay" id="day7_Name">SUNDAY</h3>
+                    <!-- Stretch Goal Date: <p id="day7_Date"></p> -->
+                    <ul class="displayListDay" id="day7_morning"> </ul>
+                    <ul class="displayListDay" id="day7_afternoon"> </ul>
+                    <ul class="displayListDay" id="day7_evening"> </ul>
+                </div>
+            </section>
+            <canvas id="myChart"></canvas>
+        </main>
+        <footer>
+
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.4.0/dist/chartjs-plugin-datalabels.min.js"></script> 
+        
+        <script src="js/app.js"></script>
+        <script src="js/rendering.js"></script>
+    </body>
+</html>
