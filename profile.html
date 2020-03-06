@@ -3,85 +3,68 @@
     <head>
         <title>Weekly Planner</title>
         <link rel="stylesheet" href="css/reset.css" type="text/css">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
         <link rel="stylesheet" href="css/styleProfile.css" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
-        <!-- <link rel="stylesheet" href="css/styleDetail.css" type="text/css"> -->
+        <link href="https://fonts.googleapis.com/css?family=Kalam|Shadows+Into+Light&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
-            
-            <!-- <div id="menuDropdown">
-                <button id="menuBtn">Menu</button>
-                <div id="menuList">
-                    <a href="main.html">Planner</a>
-                    <a href="aboutUs.html">About Us</a>
-                    <a href="detailPage.html">Category Items</a>
-                    <a href="index.html">Sign Out</a>
-                <div>
-            </div>
-            <div id="myAccountDropdown">
-              <button id="myAccountBtn">My Account</button>
-              <div id="myAccountList">
+            <div class="dropdown" style="float:left;">
+                <button class="dropbtn">Menu</button>
+                <div class="dropdown-content" style="left:0;">
                   <a href="main.html">Planner</a>
                   <a href="aboutUs.html">About Us</a>
                   <a href="detailPage.html">Category Items</a>
+                </div>
+              </div>
+              <h1 id="headerWelcome">USERNAME'S upcoming Week</h1>
+              <div class="dropdown" style="float:right;">
+                <button class="dropbtn">My Account</button>
+                <div class="dropdown-content">
+                  <a href="profile.html">My Profile</a>
                   <a href="index.html">Sign Out</a>
-              <div>
-          </div> -->
-          <div class="dropdown" style="float:left;">
-            <button class="dropbtn">Menu</button>
-            <div class="dropdown-content" style="left:0;">
-              <a href="main.html">Planner</a>
-              <a href="aboutUs.html">About Us</a>
-              <a href="detailPage.html">Category Items</a>
-            </div>
-          </div>
-          <h1 id="headerWelcome">USERNAME'S upcoming Week</h1>
-          <div class="dropdown" style="float:right;">
-            <button class="dropbtn">My Account</button>
-            <div class="dropdown-content">
-              <a href="profile.html">My Profile</a>
-              <a href="index.html">Sign Out</a>
-            </div>
-          </div>
+                </div>
+              </div>
         </header>
         <main>
+             <p id="welcomeProfile"></p><br>
             <section id="detailSection">
                 <section id="detailedList">
                     <div id="listHeader">
-                        <h3>Profile Information</h3>
+                        <h3>Update User Name</h3>
                     </div>
-                    <ul>
-                        <!-- DOMit Team Assemble! -->
                        
+                    <ul>
                         <form id="updateName">
-                          <label id="label1">Hello!</br></label>
-                          <label id="label2">Enter new username: </label>
-                          <input id="userName" type="text" required placeholder="new UserName">
-                          <button value="update" onclick="updateUserFunction()">Update</button> 
+                            <label id="label2">Enter a new Username and click "Update Name"</label>
+                            <input id="newUserName" type="text" required placeholder="new UserName">
+                            <button class="formButton" value="update">Update Name</button> 
                         </form>
-                        
-                        
-                        <p>Show user info like times logged in?</p>
-                        <p>users can delete events from this page?</p>
-                        
-                        <p>Delete Account</p>
-                        <p>your account will be permanently deleted</p>
-                        <button onclick="deleteUserFunction()">Delete Account</button>
+                        <div id="dialogoverlay"></div>
+                        <div id="dialogbox">
+                            <div>
+                                <div id="dialogboxhead"></div>
+                                <div id="dialogboxbody"></div>
+                                <div id="dialogboxfoot"></div>
+                            </div>
+                        </div>
                     </ul>
                 </section>
                 <section id="detailedInformationSection">
-                    <!-- <img id="detailPic" src="https://via.placeholder.com/150x150/" alt="placeholder"> -->
-                    <h2>Detailed Item</h2>
-                    <p>Maybe we can show the Chart in this page with specific info about the user?</p>
-                    <!-- Section info based on Object properties -->
+                    <h3>Delete Account</h2>
+                    <p>To delete your account, click on the "Delete Account" button below.</p>
+                    <span>Warning: This action cannot be undone</span>
+                    <button class="formButton" onclick="deleteUserFunction()">Delete Account</button>
                 </section>
             </section>
+            <section id="profileChartSection">
+                <p id="userEventsChart"></p>
+                <canvas id="profileChart"></canvas>
+            </section>
         </main>
-        <footer>
-
-        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
         <script src="js/app.js"></script>
-        <script src="js/rendering.js"></script>
+        <script src="js/profilePage.js"></script>
     </body>
 </html>
